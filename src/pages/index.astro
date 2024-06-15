@@ -1,0 +1,85 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Home/Hero.astro';
+import Traits from '../components/Home/Traits.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import RecentPosts from '../components/Home/RecentPosts.astro'
+
+
+const traits = [
+  {
+    title: "Working with",
+    items: [
+      'Javascript/Typescript',
+      'Go',
+      'Shopify',
+      'PHP (from time to time)',
+      'React (ew)',
+      'Vuejs (better)',
+    ]
+  },
+  {
+    title: "Passionate for",
+    items: [
+      'Literature',
+      'Food',
+      'Movies/series',
+      'Gaming',
+    ]
+  },
+  {
+    title: "Looking to learn more about",
+    items: [
+      'AI (please shut up about ai)',
+      'Kubernetes',
+      'Game development',
+      'Architecture and cloud',
+      'Other window managers',
+      'Emacs (sue me)',
+    ]
+  }
+
+]
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+    <main class="container">
+      <Hero></Hero>
+      <section class="traits">
+        {traits.map(trait => (<Traits title={trait.title} items={trait.items}></Traits>))}
+      </section>
+      <RecentPosts></RecentPosts>
+    </main>
+		<Footer />
+	</body>
+</html>
+
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+  const darkMode = window.matchMedia("(prefers-color-scheme: dark)");
+
+  if (darkMode) {
+    document.body.classList.add('dark');
+  }
+
+  window.addEventListener('theme:change', (e) => {
+    console.log('theme:change', e)
+    if (e.detail === 'dark') {
+      document.body.classList.add('dark')
+    } else {
+      document.body.classList.remove('dark')
+    }
+  })
+})
+</script>

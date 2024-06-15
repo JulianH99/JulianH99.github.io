@@ -1,0 +1,16 @@
+
+---
+interface Props {
+  title: string;
+  items: string[];
+}
+
+const { title, items } = Astro.props;
+---
+<div class="traits__list">
+  <h2 class="traits__title">{title}</h2>
+  <ul class="traits__items">
+    {items.map(item => <li>{item}</li>)}
+  </ul>
+</div>
+

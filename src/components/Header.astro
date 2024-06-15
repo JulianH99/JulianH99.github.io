@@ -1,0 +1,32 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import HeaderName from './HeaderName.astro';
+import ThemeSwitcher from './ThemeSwitcher.svelte'
+---
+
+<header class="header">
+  <nav class="header__nav">
+    <div class="header__logo">
+      <img src="https://picsum.photos/200/200" alt="">
+    </div>
+    <HeaderName></HeaderName>
+    <ul class="header__links">
+      <HeaderLink href={"/blog"}>Blog</HeaderLink>
+    </ul>
+    <ThemeSwitcher client:only></ThemeSwitcher>
+  </nav>
+</header>
+
+<style lang="scss">
+  .header {
+    &__nav {
+      display: flex;
+      .header__logo {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+    }
+  }
+</style>

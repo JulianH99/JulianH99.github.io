@@ -1,0 +1,33 @@
+---
+import { getCollection } from "astro:content"
+import FormattedDate from "../FormattedDate.astro";
+
+
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+).slice(0, 3);
+
+---
+
+<section class="recent-posts">
+  <h2>Recent posts</h2>
+
+  <ul class="recent-posts__list">
+
+    {posts.map(post => (<li>
+      <article class="recent-posts__article">
+        <h1>{post.data.title}</h1>
+        <p class="recent-posts__summary">{post.data.description}</p>
+        <p class="recent-posts__date">
+          <FormattedDate date={post.data.pubDate}></FormattedDate>
+        </p>
+        <a href={`/blog/${post.slug}`}>
+          Read more
+        </a>
+      </article>
+    </li>))}
+  </ul>
+
+
+</section>

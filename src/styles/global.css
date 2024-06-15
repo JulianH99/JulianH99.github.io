@@ -1,0 +1,24 @@
+body {
+  --title-font: "Tabular", serif;
+  --body-font: "Alpino", sans-serif;
+  --foreground: #222;
+  --background: #eee;
+
+  font-family: var(--body-font);
+  color: var(--foreground);
+  background: var(--background);
+}
+
+body.dark {
+  --foreground: #eee;
+  --background: #222;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--title-font);
+}
