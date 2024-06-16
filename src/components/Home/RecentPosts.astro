@@ -2,32 +2,63 @@
 import { getCollection } from "astro:content"
 import FormattedDate from "../FormattedDate.astro";
 
-
-
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-).slice(0, 3);
-
+const posts = (await getCollection('blog'))
+.sort(
+(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+)
+.slice(0, 3);
 ---
 
 <section class="recent-posts">
   <h2>Recent posts</h2>
-
   <ul class="recent-posts__list">
-
     {posts.map(post => (<li>
       <article class="recent-posts__article">
         <h1>{post.data.title}</h1>
-        <p class="recent-posts__summary">{post.data.description}</p>
-        <p class="recent-posts__date">
+        <p class="article__date">
           <FormattedDate date={post.data.pubDate}></FormattedDate>
         </p>
+        <p class="article__summary">{post.data.description}</p>
         <a href={`/blog/${post.slug}`}>
           Read more
         </a>
       </article>
     </li>))}
   </ul>
-
-
+  <a href="/blog" class="recent-posts__all">
+    View all
+  </a>
 </section>
+
+<style lang="scss">
+  .recent-posts {
+    h2 {
+      margin-bottom: 16px;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      column-gap: 16px;
+
+      padding: 0;
+      list-style: none;
+    }
+
+    &__article {
+      h1 {
+        font-size: 1.2em;
+        margin-bottom: 2px;
+      }
+
+      .article__date {
+        font-style: italic;
+        font-size: 0.9em;
+      }
+    }
+
+    &__all {
+      font-size: 1.5em;
+    }
+  }
+</style>

@@ -4,7 +4,7 @@ import HeaderName from './HeaderName.astro';
 import ThemeSwitcher from './ThemeSwitcher.svelte'
 ---
 
-<header class="header">
+<header class="header container">
   <nav class="header__nav">
     <div class="header__logo">
       <img src="https://picsum.photos/200/200" alt="">
@@ -19,13 +19,21 @@ import ThemeSwitcher from './ThemeSwitcher.svelte'
 
 <style lang="scss">
   .header {
+    font-size: 20px;
     &__nav {
       display: flex;
+      align-items: center;
       .header__logo {
         width: 25px;
         height: 25px;
         border-radius: 50%;
         overflow: hidden;
+        margin-right: 8px;
+      }
+
+      .header__links {
+        margin-left: auto;
+        margin-right: 16px;
       }
     }
   }

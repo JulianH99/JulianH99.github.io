@@ -1,0 +1,42 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+
+  <body>
+    <Header />
+    <main class="container">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+
+</html>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const darkMode = window.matchMedia("(prefers-color-scheme: dark)");
+
+    if (darkMode) {
+      document.body.classList.add('dark');
+    }
+
+    window.addEventListener('theme:change', (e) => {
+      console.log('theme:change', e)
+      if (e.detail === 'dark') {
+        document.body.classList.add('dark')
+      } else {
+        document.body.classList.remove('dark')
+      }
+    })
+  })
+</script>

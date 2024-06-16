@@ -1,16 +1,60 @@
 ---
-title: 'First post'
-description: 'Summary of post'
-pubDate: 'Jul 08 2022'
-heroImage: '/blog-placeholder-3.jpg'
+title: 'Learn your tools to be a better programmer'
+description: 'Learning your tools is an essential part to become a better developer, be it your code editor, terminal, etc.'
+pubDate: 'Jul 08 2024'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+This post is a bit of a rant and experience sharing, so bear with me please.
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+I like to understand the tools I use, at least for the most part. I use Windows,
+and I know a thing or two about it, and I use Linux too, and at least I can say I
+have installed arch (with the install script, of course, duh!) and that I can configure
+a window manager to my likings and make custom bash scripts to do the things I need to do.
+I'm no expert, but I like to tweak things around try to understand the tools that I use.
+VSCode was not the differnce, I learnt how to be efficient in my own way and tried to squeeze
+most of its value for my workflow, which was not complicated and most of the time I just needed
+a fast git integration, a file picker and a good search and replace, which vscode had it all
+and it's fair to say that they're all very easy to use. I stoppet using vscode because it's just
+too bloated and started using neovim (hi prime, hi teej), and I'm no Neovim expert, but
+I learned the shortcuts I needed and configured the plugins I wanted. Again, I want to stress
+out the fact that I took time to learn the tool that I wanted to use and be efficient on it as far
+as I needed to (and even today I keep learning stuff about it). But I think we all agree that there
+are basic tasks that you need to learn when using a code editor, like finding files, finding text,
+git integration if it's available, and such.
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+Now, here's where my rant really begins. I don't consider myself a very good senior dev,
+but I've had to mentor others in the past and present day, and I have to say,
+despite vscode being so popular, and despite developers using it from the start of their journey, I cannot stress enough
+how anoying and tedious it's been telling someone over a call to search for 'filename.ext' and watch
+them open their filetree scrolling up and down and opening and closing subfolders instead of just hitting
+that sweet 'control-p' and type the filename and be done with it, or (and I'm not lying) tell them to search
+for that weird 'console.log' in a big file and watch how they start scrolling up and down instead of hitting
+'control-f'. And, don't get me wrong, these things don't happen to jr devs only, but with some considered senior
+developers in mine and other teams as well. Now, some of these theme members are
+the same that have told me in the past that not using AI while coding makes developer
+look like 'cavemen', and more than baffled, this makes me feel worried about the kind
+of developers that go out in the wild and tell people to use copilot but then proceed
+to look for a file in their filetree of a project with 100 files and get scared when
+a merge conflict pops up in their vscode because they don't know how to use the difftool
+(let's all agree that vscode's difftool is the easiest to use) and don't even let me get
+started on the ones that 'know' javascript (I mean, I don't consider myself an expert but
+I sure don't get confused when I need to use object destructuring).
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+The use of the terminal is on another level. I do get not every job or programming
+role requires to be an expert, but most tools require the use of the terminal
+(like npm (don't use npm, use pnpm), nodejs, git, etc), but I cannot tell you how
+many times I've told someone to cd into home to configurea x thing and they're like
+'what's home', or please list the files in the directory and then it's just a cursor
+blinking waiting for me to tell them to just type ls and enter. Again, I'm not an expert
+at everything I do, but I'm sure watching a video in 'terminal basics' and 'how to use vscode'
+won't hurt your productivity.
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+At the end of the day, I do get that not everyone learns at the same phase, and I try
+to teach as much as I can on those little calls with my team members and be
+comprehensive, but I cannot stop worrying about the fact that most developers
+are not interested (or so it seems) in learning at least the basics about the
+tools they use, but they are heavily invested in getting tools that do as much
+as possible for them.
+
+Anyway, that was my rant, my frustration let out. Thanks for comming to my non-ted talk.
+
