@@ -19,13 +19,13 @@ const posts = (await getCollection('blog'))
           <FormattedDate date={post.data.pubDate}></FormattedDate>
         </p>
         <p class="article__summary">{post.data.description}</p>
-        <a href={`/blog/${post.slug}`}>
+        <a href={`/blog/posts/${post.slug}`}>
           Read more
         </a>
       </article>
     </li>))}
   </ul>
-  <a href="/blog" class="recent-posts__all">
+  <a href="/blog/posts" class="recent-posts__all">
     View all
   </a>
 </section>

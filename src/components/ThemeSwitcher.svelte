@@ -1,7 +1,7 @@
 <script>
   let icons = {
-    light: '/moon-icon.png',
-    dark: '/sun-icon.png'
+    light: '/blog/moon-icon.png',
+    dark: '/blog/sun-icon.png'
   }
 
   const darkMode = window.matchMedia("(prefers-color-scheme: dark)");
