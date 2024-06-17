@@ -8,6 +8,7 @@ body {
   --foreground: #222;
   --background: #eee;
 
+  font-size: 18px;
   font-family: var(--body-font);
   color: var(--foreground);
   background: var(--background);
@@ -15,7 +16,6 @@ body {
 }
 
 body.dark {
-  font-size: 18px;
   --foreground: #eee;
   --background: #222;
 }

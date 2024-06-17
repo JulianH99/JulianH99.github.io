@@ -2,13 +2,27 @@
 const today = new Date();
 ---
 
-<footer class="container">
+<footer class="footer container">
   &copy; {today.getFullYear()} Julián Barrios. All rights reserved.
+  <ul class="footer__socials">
+    <li><a href="https://github.com/JulianH99" target="_blank">Github</a></li>
+    <li><a href="https://www.linkedin.com/in/julian-barrios-693ba71a6/" target="_blank">Linkedin</a></li>
+  </ul>
 </footer>
 
-<style>
-  footer {
+<style lang="scss">
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-top: 32px;
     margin-bottom: 16px;
+    &__socials {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      list-style: none;
+      padding: 0;
+    }
   }
 </style>

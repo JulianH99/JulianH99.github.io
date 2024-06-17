@@ -1,0 +1,50 @@
+---
+import { getCollection } from 'astro:content';
+import FormattedDate from '../../components/FormattedDate.astro';
+import Default from '../../layouts/Default.astro';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+<Default>
+  <h1>All posts</h1>
+  <section>
+    <ul class="post-list">
+      {posts.map(post => (<li>
+        <article class="article">
+          <h1>{post.data.title}</h1>
+          <p class="article__date">
+            <FormattedDate date={post.data.pubDate}></FormattedDate>
+          </p>
+          <p class="article__summary">{post.data.description}</p>
+          <a href={`/blog/${post.slug}`}>
+            Read more
+          </a>
+        </article>
+      </li>))}
+    </ul>
+  </section>
+</Default>
+
+<style lang="scss">
+  .post-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    column-gap: 16px;
+
+    padding: 0;
+    list-style: none;
+    .article {
+      h1 {
+        font-size: 1.2em;
+        margin-bottom: 2px;
+      }
+
+      .article__date {
+        font-style: italic;
+        font-size: 0.9em;
+      }
+    }
+  }
+</style>

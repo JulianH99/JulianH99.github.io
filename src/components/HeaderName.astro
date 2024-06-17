@@ -10,3 +10,26 @@ import { DARK_NAME, LIGTH_HEADER_NAME } from "../consts"
 </a>
 
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const headerName = document.querySelector('.header__text');
+  const darkMode = window.matchMedia("(prefers-color-scheme: dark)");
+
+  if (darkMode && headerName) {
+    headerName.innerHTML = headerName.dataset.dark;
+  }
+
+  window.addEventListener('theme:change', e => {
+    if (headerName) {
+      if (e.detail === "dark"){
+        headerName.innerHTML = headerName.dataset.dark
+      } else {
+        headerName.innerHTML = headerName.dataset.light
+      }
+    }
+  })
+
+})
+</script>
+
+
