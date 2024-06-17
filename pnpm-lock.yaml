@@ -32,10 +32,6 @@ importers:
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
-    devDependencies:
-      sass:
-        specifier: ^1.77.5
-        version: 1.77.5
 
 packages:
 
@@ -3527,7 +3523,8 @@ snapshots:
 
   human-signals@5.0.0: {}
 
-  immutable@4.3.6: {}
+  immutable@4.3.6:
+    optional: true
 
   import-meta-resolve@4.1.0: {}
 
@@ -4456,6 +4453,7 @@ snapshots:
       chokidar: 3.6.0
       immutable: 4.3.6
       source-map-js: 1.2.0
+    optional: true
 
   sax@1.4.1: {}
 
