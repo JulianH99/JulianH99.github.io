@@ -1,7 +1,3 @@
----
-import { DARK_NAME, LIGTH_HEADER_NAME } from "../consts"
----
-
 <a class="header__text"
   href="/"
   data-light="Developer by day"
@@ -16,15 +12,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const darkMode = window.matchMedia("(prefers-color-scheme: dark)");
 
   if (darkMode && headerName) {
-    headerName.innerHTML = headerName.dataset.dark;
+    headerName.innerHTML = headerName.getAttribute('data-dark') || '';
   }
 
   window.addEventListener('theme:change', e => {
     if (headerName) {
-      if (e.detail === "dark"){
-        headerName.innerHTML = headerName.dataset.dark
+      if ((e as any).detail === "dark"){
+        headerName.innerHTML = headerName.getAttribute('data-dark') || '';
       } else {
-        headerName.innerHTML = headerName.dataset.light
+        headerName.innerHTML = headerName.getAttribute('data-light') || '';
       }
     }
   })

@@ -32,7 +32,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
     window.addEventListener('theme:change', (e) => {
       console.log('theme:change', e)
-      if (e.detail === 'dark') {
+      if ((e as any).detail === 'dark') {
         document.body.classList.add('dark')
       } else {
         document.body.classList.remove('dark')
