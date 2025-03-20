@@ -13,11 +13,35 @@ body {
   color: var(--foreground);
   background: var(--background);
   margin: 0;
+  display: flex;
+  justify-content: start;
+  align-items: stretch;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --foreground: #eee;
+    --background: #222;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    --foreground: #222;
+    --background: #eee;
+  }
 }
 
 body.dark {
   --foreground: #eee;
   --background: #222;
+}
+
+body:not(.dark) {
+  --foreground: #222;
+  --background: #eee;
 }
 
 h1,
@@ -58,7 +82,10 @@ main {
 }
 
 .container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-inline: 16px;
+
+  @media screen and (min-width: 1024px) {
+    width: clamp(1024px, 80%, 1200px);
+    margin-inline: auto;
+  }
 }

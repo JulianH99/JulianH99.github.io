@@ -13,8 +13,8 @@ const traits = [
       'Go',
       'Shopify',
       'PHP (from time to time)',
-      'React (ew)',
-      'Vuejs (better)',
+      'React',
+      'Vuejs (the better react)',
     ]
   },
   {
@@ -22,7 +22,7 @@ const traits = [
     items: [
       'Literature',
       'Food',
-      'Movies/series',
+      'Movies/Series',
       'Gaming',
     ]
   },
@@ -30,11 +30,10 @@ const traits = [
     title: "Looking to learn more about",
     items: [
       'AI (please shut up about ai)',
-      'Kubernetes',
+      'Kubernetes and IaC',
       'Game development',
       'Architecture and cloud',
-      'Other window managers',
-      'Emacs (sue me)',
+      'Emacs (yes, the dark side)',
     ]
   }
 
@@ -54,7 +53,13 @@ const traits = [
 <style lang="scss">
   .traits {
     display: flex;
-    gap: 8px;
+    gap: 16px;
+    flex-direction: column;
+
+    @media screen and (min-width: 1024px) {
+      flex-direction: row;
+      gap: 8px;
+    }
   }
 </style>
 

@@ -18,7 +18,11 @@ const { title, items } = Astro.props;
 <style lang="scss">
   .traits__list {
     flex-grow: 1;
-    width: calc(100% / 3);
+    width: 100%;
+
+    @media screen and (min-width: 1024px) {
+      width: calc(100% / 3); 
+    }
   }
 </style>
 

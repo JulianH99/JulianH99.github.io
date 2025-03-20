@@ -11,7 +11,7 @@ and I know a thing or two about it, and I use Linux too, and at least I can say 
 have installed arch (with the install script, of course, duh!) and that I can configure
 a window manager to my likings and make custom bash scripts to do the things I need to do.
 I'm no expert, but I like to tweak things around try to understand the tools that I use.
-VSCode was not the differnce, I learnt how to be efficient in my own way and tried to squeeze
+VSCode was not the difference, I learnt how to be efficient in my own way and tried to squeeze
 most of its value for my workflow, which was not complicated and most of the time I just needed
 a fast git integration, a file picker and a good search and replace, which vscode had it all
 and it's fair to say that they're all very easy to use. I stoppet using vscode because it's just
